@@ -87,7 +87,8 @@ class accountsController extends http\controller
 
     }
 //this is used to save the update form data
-    public static function save() {
+    public static function save()
+    {
         $user = accounts::findOne($_REQUEST['id']);
 
         $user->email = $_POST['email'];
