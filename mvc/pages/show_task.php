@@ -39,15 +39,15 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    ID: <dimensions> <input type="number" name="id" value="<?php echo $data->id; ?>"> </dimensions><br><br>
+
 
     Owner Email: <dimensions> <input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></dimensions><br><br>
 
     Owner Id: <dimensions> <input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></dimensions><br><br>
 
-    Created Date: <dimensions> <input type="date" name="createddate" value="<?php echo $data->createddate; ?>"></dimensions><br><br>
+    Created Date: <dimensions> <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></dimensions><br><br>
 
-    Due Date: <dimensions> <input type="date" name="duedate" value="<?php echo $data->duedate; ?>"></dimensions><br><br>
+    Due Date: <dimensions> <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></dimensions><br><br>
 
     Message: <dimensions> <input type="text" name="message" value="<?php echo $data->message; ?>"></dimensions><br><br>
 
