@@ -30,15 +30,25 @@ print utility\htmlTable::generateTableFromOneRecord($data);
 
 ?>
 
+<style>
+    dimensions
+    {
+        width:5em;
+        float:right;
+        text-align:left;
+        margin-right :88.0em;
+    }
+    </style>
+
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
+    First Name: <dimensions> <input type="text" name="fname" value="<?php echo $data->fname; ?>"></dimensions><br><br>
 
-    Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>"><br>
-    Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
-    Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
-    Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
-    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
+    Last Name: <dimensions> <input type="text" name="lname" value="<?php echo $data->lname; ?>"></dimensions><br><br>
+    Email: <dimensions> <input type="text" name="email" value="<?php echo $data->email; ?>"></dimensions><br><br>
+    Phone: <dimensions> <input type="text" name="phone" value="<?php echo $data->phone; ?>"></dimensions><br><br>
+    Birthday: <dimensions> <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"></dimensions><br><br>
+    Gender: <dimensions> <input type="text" name="gender" value="<?php echo $data->gender; ?>"></dimensions><br><br>
     <input type="submit" value="Submit form">
 </form>
 

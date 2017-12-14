@@ -23,6 +23,42 @@
 print utility\htmlTable::generateTableFromOneRecord($data);
 
 ?>
+
+    <style>
+          dimensions
+          {
+              width:5em;
+             float:right;
+             text-align:left;
+             margin-right :88.0em;
+          }
+
+
+
+    </style>
+
+<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+
+    ID: <dimensions> <input type="number" name="id" value="<?php echo $data->id; ?>"> </dimensions><br><br>
+
+    Owner Email: <dimensions> <input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></dimensions><br><br>
+
+    Owner Id: <dimensions> <input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></dimensions><br><br>
+
+    Created Date: <dimensions> <input type="date" name="createddate" value="<?php echo $data->createddate; ?>"></dimensions><br><br>
+
+    Due Date: <dimensions> <input type="date" name="duedate" value="<?php echo $data->duedate; ?>"></dimensions><br><br>
+
+    Message: <dimensions> <input type="text" name="message" value="<?php echo $data->message; ?>"></dimensions><br><br>
+
+    Is Done: <dimensions> <input type="number" name="isdone" value="<?php echo $data->isdone; ?>"></dimensions><br><br>
+
+                 <input type="submit" value="Submit form">
+
+</form>
+
+
+
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
