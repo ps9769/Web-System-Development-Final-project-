@@ -25,6 +25,43 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 
 ?>
 
+     <br>
+     <br>
+
+
+  <style>
+
+    dimensions
+    {
+        width:5em;
+        float:right;
+        text-align:left;
+        margin-right :88.0em;
+    }
+
+  </style>
+
+
+<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+
+
+
+    Owner Email: <dimensions> <input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></dimensions><br><br>
+
+    Owner Id: <dimensions> <input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></dimensions><br><br>
+
+    Created Date: <dimensions> <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></dimensions><br><br>
+
+    Due Date: <dimensions> <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></dimensions><br><br>
+
+    Message: <dimensions> <input type="text" name="message" value="<?php echo $data->message; ?>"></dimensions><br><br>
+
+    Is Done: <dimensions> <input type="number" name="isdone" value="<?php echo $data->isdone; ?>"></dimensions><br><br>
+
+    <input type="submit" value="Insert form">
+
+</form>
+
 
 <script src="js/scripts.js"></script>
 </body>

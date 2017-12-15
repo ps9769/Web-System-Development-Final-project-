@@ -102,7 +102,8 @@ class accountsController extends http\controller
 
     }
 
-    public static function delete() {
+    public static function delete()
+    {
 
         $record = accounts::findOne($_REQUEST['id']);
         $record->delete();
