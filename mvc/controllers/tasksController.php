@@ -8,8 +8,8 @@
 
 
 //each page extends controller and the index.php?page=tasks causes the controller to be called
-class tasksController extends http\controller
-{
+ class tasksController extends http\controller
+  {
     //each method in the controller is named an action.
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
@@ -104,11 +104,12 @@ class tasksController extends http\controller
 
     //this is the delete function.  You actually return the edit form and then there should be 2 forms on that.
     //One form is the todo and the other is just for the delete button
+
     public static function delete()
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print_r($_POST);
+        print_r("<h1><b>Deleted Record Successfully</b></h1>");
 
     }
 
