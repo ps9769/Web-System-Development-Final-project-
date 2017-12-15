@@ -48,7 +48,8 @@ class accountsController extends http\controller
         $user = accounts::findUserbyEmail($_REQUEST['email']);
 
 
-        if ($user == FALSE) {
+        if ($user == FALSE)
+          {
             $user = new account();
             $user->email = $_POST['email'];
             $user->fname = $_POST['fname'];
@@ -60,7 +61,7 @@ class accountsController extends http\controller
             //this creates the password
             //this is a mistake you can fix...
             //Turn the set password function into a static method on a utility class.
-            $user->password = $user->setPassword($_POST['password']);
+            $user->password = account::setPassword($_POST['password']);
             $user->save();
 
             //you may want to send the person to a
@@ -68,14 +69,16 @@ class accountsController extends http\controller
             // and then send them to the task list page and a link to create tasks
             header("Location: index.php?page=accounts&action=all");
 
-        } else {
+           }
+        else
+           {
             //You can make a template for errors called error.php
             // and load the template here with the error you want to show.
            // echo 'already registered';
             $error = 'already registered';
             self::getTemplate('error', $error);
 
-        }
+           }
 
     }
 
@@ -123,11 +126,14 @@ class accountsController extends http\controller
         $user = accounts::findUserbyEmail($_REQUEST['email']);
 
 
-        if ($user == FALSE) {
+        if ($user == FALSE)
+          {
             echo 'user not found';
-        } else {
-
-            if($user->checkPassword($_POST['password']) == TRUE) {
+           }
+        else
+          {
+            if ($user->checkPassword($_POST['password']) == TRUE)
+              {
 
                 echo 'login';
 
@@ -136,11 +142,13 @@ class accountsController extends http\controller
 
                 //forward the user to the show all todos page
                 print_r($_SESSION);
-            } else {
+              }
+            else
+              {
                 echo 'password does not match';
-            }
+              }
 
-        }
+          }
 
 
 
