@@ -28,12 +28,22 @@
    <br>
 
 
+  <!-- --><?php
+/*   //this is how you print something
+
+   print utility\htmlTable::genarateTableFromMultiArray($data);
+   */?>
+
 
    <?php
    //this is how you print something
-
+   if($data == false){
+       echo '<h3>You did not create any Task</h3>';
+   }else {
        print utility\htmlTable::genarateTableFromMultiArray($data);
-    ?>
+   }
+
+   ?>
 
 
      <br>
