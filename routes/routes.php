@@ -176,7 +176,7 @@ class routes
 
 
         $routes[]=routeMethods::create('GET', 'display'  , 'tasks', 'tasksController', 'display'  );
-
+        $routes[]=routeMethods::create('GET' ,'logout', 'accounts', 'accountsController', 'logout'  );
 
 
 

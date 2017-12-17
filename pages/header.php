@@ -1,6 +1,13 @@
 <html>
 <body>
 
-<h1>logoutygygyuy</h1>
+
+
+    <form action="index.php?page=accounts&action=logout">
+        <button type="submit"  value="logout">LogOut</button>
+    </form>
+
+
+
 </body>
 </html>
