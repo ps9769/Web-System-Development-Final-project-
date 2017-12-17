@@ -179,7 +179,7 @@ class routes
         $routes[]=routeMethods::create('GET' ,'logout', 'accounts', 'accountsController', 'logout'  );
 
         $routes[]=routeMethods::create('GET' ,'profile', 'accounts', 'accountsController', 'profile11'  );
-        $routes[]=routeMethods::create('GET' ,'editprofile', 'accounts', 'accountsController', 'editprofile'  );
+        $routes[]=routeMethods::create('GET' ,'editprofile', 'accounts', 'accountsController', 'editprofile11'  );
 
 
         return $routes;

@@ -188,7 +188,7 @@ class accountsController extends http\controller
     }
 
 
-    public static function editprofile()
+    public static function editprofile11()
 
     {
         if (session_status()==PHP_SESSION_NONE)
