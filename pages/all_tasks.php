@@ -17,19 +17,28 @@
 
 <body>
 
-<?php
-//this is how you print something
+
+   <?php
+        include "header.php";
+     ?>
 
 
-include "header.php";
 
-print utility\htmlTable::genarateTableFromMultiArray($data);
+   <br>
+   <br>
 
 
-?>
+
+   <?php
+   //this is how you print something
+
+       print utility\htmlTable::genarateTableFromMultiArray($data);
+    ?>
+
 
      <br>
      <br>
+
 
 
   <style>
@@ -45,8 +54,7 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
   </style>
 
 
-<form action="index.php?page=tasks&action=insert" method="post">
-
+<form action="index.php?page=tasks&action=insert" method="post" id="formInsertTask">
 
 
     Owner Email: <dimensions> <input type="email" name="owneremail"> </dimensions><br><br>
@@ -61,11 +69,17 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
 
     Is Done: <dimensions> <input type="number" name="isdone"> </dimensions><br><br>
 
-    <input type="submit" value="Insert Task">
+    <input type="submit" form="formInsertTask" value="Insert Task">
 
 </form>
 
+   <br>
+   <br>
+   <a href="index.php?page=accounts&action=profile"><b>Profile</b></a>
+   &nbsp; &nbsp; &nbsp;
+   <a href="index.php?page=accounts&action=profile"><b>Edit Your Profile<b></a>
 
-<script src="js/scripts.js"></script>
+
+   <script src="js/scripts.js"></script>
 </body>
 </html>

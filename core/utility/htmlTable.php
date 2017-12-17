@@ -16,7 +16,8 @@ class htmlTable
         $fieldHeadings = array_keys($fieldHeadings);
         //this gets the page being viewed so that the table routes requests to the correct controller
         $referingPage = $_REQUEST['page'];
-        foreach ($fieldHeadings as $heading) {
+        foreach ($fieldHeadings as $heading)
+        {
             $tableGen .= '<th>' . $heading . '</th>';
         }
         $tableGen .= '</tr>';

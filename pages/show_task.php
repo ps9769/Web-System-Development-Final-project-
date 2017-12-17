@@ -18,12 +18,14 @@
 <body>
 
 <?php
-//this is how you print something  $data contains the record that was selected on the table.
-  include "header.php";
-
-   print utility\htmlTable::generateTableFromOneRecord($data);
-
+include "header.php";
 ?>
+
+   <?php
+        //this is how you print something  $data contains the record that was selected on the table.
+        print utility\htmlTable::generateTableFromOneRecord($data);
+
+    ?>
 
     <style>
           dimensions
