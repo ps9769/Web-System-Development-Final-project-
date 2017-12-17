@@ -109,7 +109,7 @@
          session_start();
          $id = $_SESSION["userID"];
          $z= todos::searchtodo($id);
-         self::getTemplate('all_tasks',$z);
+        // self::getTemplate('all_tasks',$z);
 
 
 
