@@ -61,7 +61,18 @@
         width:5em;
         float:right;
         text-align:left;
-        margin-right :88.0em;
+        margin-right :10em;
+    }
+
+    div
+    {
+        border: 20px wheat;
+        background-color: whitesmoke;
+        border-style: solid;
+        padding: 40px 40px 40px 40px;
+        width: 250px;
+        margin-left: 38em;
+
     }
 
 
@@ -85,6 +96,7 @@
     Message: <dimensions> <input type="text" name="message" > </dimensions><br><br>
 
     Is Done: <dimensions> <input type="number" name="isdone"> </dimensions><br><br>
+    <br>
 
     <b><input type="submit" form="formInsertTask" value="Insert Task"></b>
 
