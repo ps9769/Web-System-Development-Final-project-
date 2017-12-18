@@ -8,27 +8,82 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
 
-<body>
+ <body style='background-color:darkorange'>
+
+    <A1><h1><b> Welcome New User <b></h1><A1>
+
+ <br>
+
+<style>
+
+    A1
+    {
+        text-align: center;
+        color: black;
+    }
+    dimensions
+    {
+        width:5em;
+        text-align:left;
+        margin-right :88.0em;
 
 
-<form action="index.php?page=accounts&action=register" method="post">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
-    Email: <input type="text" name="email"><br>
-    Phone: <input type="text" name="phone"><br>
-    Birthday: <input type="text" name="birthday"><br>
-    Gender: <input type="text" name="gender"><br>
-    Password: <input type="password" name="password"><br>
-    <input type="submit" value="Submit form">
+    }
+
+    div
+    {
+        border: 20px wheat;
+        background-color: whitesmoke;
+        border-style: solid;
+        padding: 40px 40px 40px 40px;
+        width: 250px;
+        margin-left: 38em;
+
+    }
+
+    bad
+    {
+        font-size: 23px;
+    }
+
+
+</style>
+
+
+<div>
+
+    <form action="index.php?page=accounts&action=register" method="post">
+
+
+
+    <bad>First Name :</bad>  <dimensions> <input type="text" size="35" name="fname"></dimensions><br><br>
+
+    <bad>Last Name :</bad> <dimensions> <input type="text" size="35" name="lname"></dimensions><br><br>
+
+    <bad>Email :</bad> <dimensions><input type="text" size="35" name="email"></dimensions><br><br>
+
+    <bad>Phone :</bad> <dimensions><input type="text" size="35" name="phone"></dimensions><br><br>
+
+    <bad>Birthday :</bad> <dimensions><input type="text" size="35" name="birthday"></dimensions><br><br>
+
+    <bad>Gender :</bad> <dimensions><input type="text" size="35" name="gender"></dimensions><br><br>
+
+    <bad>Password :</bad> <dimensions><input type="password" size="35" name="password"></dimensions><br><br>
+
+
+
+        <input type="submit" value="Submit form">
+
 </form>
 
+</div>
 
 <script src="js/scripts.js"></script>
 </body>

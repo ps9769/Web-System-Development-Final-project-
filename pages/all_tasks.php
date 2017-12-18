@@ -23,28 +23,31 @@
      ?>
 
 
+   <br>
+   <br>
+
+   <a href="index.php?page=accounts&action=profile"><b>Profile</b></a>
+   &nbsp;      &nbsp; &nbsp;
+   <a href="index.php?page=accounts&action=profile"><b>Edit Your Profile<b></a>
+
 
    <br>
    <br>
 
-
-  <!-- --><?php
-/*   //this is how you print something
-
-   print utility\htmlTable::genarateTableFromMultiArray($data);
-   */?>
 
 
    <?php
-   //this is how you print something
-   if($data == false){
-       echo '<h3>You did not create any Task</h3>';
-   }else {
-       print utility\htmlTable::genarateTableFromMultiArray($data);
-   }
+
+          if($data == false)
+            {
+              echo '<h3> No Task is Created </h3>';
+             }
+          else
+            {
+              print utility\htmlTable::genarateTableFromMultiArray($data);
+             }
 
    ?>
-
 
      <br>
      <br>
@@ -82,13 +85,6 @@
     <input type="submit" form="formInsertTask" value="Insert Task">
 
 </form>
-
-   <br>
-   <br>
-   <a href="index.php?page=accounts&action=profile"><b>Profile</b></a>
-   &nbsp; &nbsp; &nbsp;
-   <a href="index.php?page=accounts&action=profile"><b>Edit Your Profile<b></a>
-
 
    <script src="js/scripts.js"></script>
 </body>

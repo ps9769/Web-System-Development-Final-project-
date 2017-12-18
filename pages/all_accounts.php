@@ -16,9 +16,8 @@
 </head>
 
 <body>
-<h1>All Accounts</h1>
+<h1><b>All Records in the Account Table </b></h1>
 
-<h1> HI </h1>
 
 <?php
 //this is how you print something

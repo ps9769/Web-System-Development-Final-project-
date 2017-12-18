@@ -20,40 +20,125 @@
     <![endif]-->
 </head>
 
-<body>
+<style>
+
+    dimensions
+       {
+        text-align: center;
+        color: black;
+       }
+
+   dimensions2
+       {
+        float:right;
+        margin-right: 3em;
+        }
+
+    dimensions3
+       {
+        float:right;
+        margin-right: 3em;
+       }
+
+    dimensions4
+       {
+        float:right;
+        margin-right: 7em;
+       }
+       #zx
+       {
+
+        text-align: center;
+        color: red
+       }
+     b
+       {
+        color: black;
+       }
+
+      h3
+       {
+          margin-left:27em ;
+        }
+      x
+      {
+          font-size: 20px;
+          margin-left:35em ;
+      }
+      #qas
+      {
+          margin-left: 2em;
+
+      }
+
+    #cdiv
+    {
+        border:20px wheat;
+        background-color: whitesmoke;
+        border-style: solid;
+        padding:40px 40px 40px 40px;
+        width: 400px;
+
+    }
+
+</style>
 
 
-  <h1>
-    <?php
+<body style='background-color:darkorange'>
 
-    //this how to print some data;
-    echo $data['site_name'];
 
-    ?>
-  </h1>
+
+    <dimensions><h1>
+         <?php
+               //this how to print some data;
+               echo $data['site_name'];
+          ?>
+        </h1></dimensions>
+
+
 
 <!--<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 -->
 
+    <br>
+    <br>
 
 
 
-<form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required>
+    <div class="container" id="cdiv">
 
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <form action="index.php?page=accounts&action=login" method="POST">
 
-        <button type="submit">Login</button>
+
+        <label id="qas"><b> Email Id : </b></label>
+        <dimensions2><input  type="text" size="25px" placeholder="Enter Email Id" name="email" required></dimensions2>
+
+        <br><br><br>
+
+        <label id="qas"><b>Password : </b></label>
+        <dimensions3><input type="password" size="25px" placeholder="Enter Password" name="password" required></dimensions3>
+
+            <br><br><br>
+
+        <dimensions4><button type="submit"><b>Login</b></button></dimensions4>
+
+        <br>
+        <br>
+        <a href="index.php?page=accounts&action=register" id="zx"> Don't have an account ?? Create One </a>
+
+        </form>
+
     </div>
 
 
-</form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3>IS 661</h3>
+    <x> Developed By P_S </x>
+
 
 
 <script src="js/scripts.js"></script>

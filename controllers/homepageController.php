@@ -20,7 +20,9 @@ class homepageController extends http\controller
 //the template is an HTML page with PHP inserted in it.  just put an if/else statement to check for the session and show correct links
 
 
-        $templateData['site_name'] = 'Project II WSD ';
+
+        echo"<br>";
+        $templateData['site_name'] = 'Project II [ Web Systems Development ]';
 
 //template data contains what will show up in the $data variable in the homepage template
 //the name of the template 'homepage' becomes 'homepage.php' in the pages directory
