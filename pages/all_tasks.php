@@ -98,7 +98,7 @@
     Is Done: <dimensions> <input type="number" name="isdone"> </dimensions><br><br>
     <br>
 
-    <b><input type="submit" form="formInsertTask" value="Insert Task"></b>
+    <input type="submit" form="formInsertTask" value="Insert Task">
 
 </form>
 

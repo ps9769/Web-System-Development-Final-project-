@@ -67,7 +67,7 @@ class accountsController extends http\controller
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+            header("Location: index.php?page=homepage&action=show");
 
            }
         else
@@ -101,8 +101,8 @@ class accountsController extends http\controller
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
         $user->save();
-        header("Location: index.php?page=accounts&action=all");
-
+        //header("Location: index.php?page=accounts&action=all");
+        self::getTemplate('show_account',$user);
     }
 
     public static function delete()
@@ -110,7 +110,7 @@ class accountsController extends http\controller
 
         $record = accounts::findOne($_REQUEST['id']);
         $record->delete();
-        header("Location: index.php?page=accounts&action=all");
+        header("Location: index.php?page=homepage&action=show");
     }
 
     //this is to login, here is where you find the account and allow login or deny.
@@ -188,18 +188,6 @@ class accountsController extends http\controller
     }
 
 
-    public static function editprofile11()
 
-    {
-        if (session_status()==PHP_SESSION_NONE)
-        {
-            session_start();
-
-        }
-
-
-
-
-    }
 
 }

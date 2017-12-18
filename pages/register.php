@@ -42,7 +42,7 @@
         border: 20px wheat;
         background-color: whitesmoke;
         border-style: solid;
-        padding: 40px 40px 40px 40px;
+        padding: 50px 50px 50px 50px;
         width: 250px;
         margin-left: 38em;
 
@@ -79,7 +79,7 @@
 
 
 
-        <input type="submit" value="Submit form">
+      <input type="submit" size="50" value="Submit form">
 
 </form>
 

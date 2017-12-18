@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style='background-color:lightblue'>
 <h1><b>All Records in the Account Table </b></h1>
 
 

@@ -70,19 +70,22 @@
 
     public static function save()
     {
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
         $user = todos::findOne($_REQUEST['id']);
-
-
         $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];
         $user->createddate = $_POST['createddate'];
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
-        $user->userid = $_SESSION['userid'];
+        $user->userid = $_SESSION['userID'];
 
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+
+
+        self::display();
 
     }
 
@@ -90,15 +93,20 @@
     {
         $user = new todo();
 
-
+        if(session_status()==PHP_SESSION_NONE){
+            session_start();
+        }
         $user->owneremail = $_POST['owneremail'];
         $user->ownerid = $_POST['ownerid'];
         $user->createddate = $_POST['createddate'];
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        $user->userid = $_SESSION['userID'];
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+        //print_r($user);
+       // header("Location: index.php?page=tasks&action=all");
+        self::display();
 
     }
 
@@ -106,9 +114,12 @@
 
      public static function display()
      {
-         session_start();
+         if(session_status()==PHP_SESSION_NONE){
+             session_start();
+         }
          $id = $_SESSION["userID"];
          $z= todos::searchtodo($id);
+         //print_r($z);
          self::getTemplate('all_tasks',$z);
 
 
@@ -124,8 +135,8 @@
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print_r("<h1><b>Deleted Record Successfully</b></h1>");
-
+        //print_r("<h1><b>Deleted Record Successfully</b></h1>");
+        self::display();
     }
 
 }

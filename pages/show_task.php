@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style='background-color:lightblue'>
 
 <?php
 include "header.php";
