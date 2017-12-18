@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
- <body style='background-color:darkorange'>
+ <body style='background-color:lightblue'>
 
     <A1><h1><b> Welcome New User <b></h1><A1>
 
@@ -67,9 +67,9 @@
 
     <bad>Last Name :</bad> <dimensions> <input type="text" size="35" name="lname"></dimensions><br><br>
 
-    <bad>Email :</bad> <dimensions><input type="text" size="35" name="email"></dimensions><br><br>
+    <bad>Email :</bad> <dimensions><input type="email" size="35" name="email"></dimensions><br><br>
 
-    <bad>Phone :</bad> <dimensions><input type="text" size="35" name="phone"></dimensions><br><br>
+    <bad>Phone :</bad> <dimensions><input type="text" size="35" name="phone"  maxlength="10" ></dimensions><br><br>
 
     <bad>Birthday :</bad> <dimensions><input type="text" size="35" name="birthday"></dimensions><br><br>
 

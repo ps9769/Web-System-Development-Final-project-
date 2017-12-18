@@ -20,7 +20,7 @@
     ?>
 
 
-<body>
+<body style='background-color:lightblue'>
 
 
 <h1>First Name : <?php echo $data->fname; ?></h1>
@@ -53,9 +53,9 @@
 
     Last Name: <dimensions> <input type="text" name="lname" value="<?php echo $data->lname; ?>"> </dimensions><br><br>
 
-    Email: <dimensions> <input type="text" name="email" value="<?php echo $data->email; ?>"></dimensions><br><br>
+    Email: <dimensions> <input type="email" name="email" value="<?php echo $data->email; ?>"></dimensions><br><br>
 
-    Phone: <dimensions> <input type="text" name="phone" value="<?php echo $data->phone; ?>"></dimensions><br><br>
+    Phone: <dimensions> <input type="number" name="phone" value="<?php echo $data->phone; ?>"></dimensions><br><br>
 
     Birthday: <dimensions> <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"></dimensions><br><br>
 

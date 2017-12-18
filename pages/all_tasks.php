@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style='background-color:lightblue'>
 
 
    <?php
@@ -64,13 +64,17 @@
         margin-right :88.0em;
     }
 
+
+
   </style>
 
+   <div>
 
 <form action="index.php?page=tasks&action=insert" method="post" id="formInsertTask">
 
 
-    Owner Email: <dimensions> <input type="email" name="owneremail"> </dimensions><br><br>
+
+   Owner Email: <dimensions> <input type="email" name="owneremail"> </dimensions><br><br>
 
     Owner Id: <dimensions> <input type="number" name="ownerid"> </dimensions><br><br>
 
@@ -82,9 +86,11 @@
 
     Is Done: <dimensions> <input type="number" name="isdone"> </dimensions><br><br>
 
-    <input type="submit" form="formInsertTask" value="Insert Task">
+    <b><input type="submit" form="formInsertTask" value="Insert Task"></b>
 
 </form>
+
+   </div>
 
    <script src="js/scripts.js"></script>
 </body>
