@@ -19,7 +19,7 @@
 
  <br>
 
-    <A1><h1><b> Welcome New User <b></h1><A1>
+     <A1><h1><b> Welcome New User <b></h1><A1>
 
  <br>
 
@@ -38,7 +38,6 @@
 
 
     }
-
     div
     {
         border: 20px wheat;
@@ -49,7 +48,6 @@
         width: 500px;
         margin-left: 35em;
     }
-
     bad
     {
         font-size: 15px;
@@ -71,9 +69,9 @@
 
     <bad>Email :</bad> <dimensions><input type="email" size="20" name="email"></dimensions><br><br>
 
-    <bad>Phone :</bad> <dimensions><input type="number" size="20" name="phone"  maxlength="10" ></dimensions><br><br>
+    <bad>Phone :</bad> <dimensions><input type="number" size="20"  name="phone" maxlength="10"  ></dimensions><br><br>
 
-    <bad>Birthday :</bad> <dimensions><input type="date" size="20" name="birthday"></dimensions><br><br>
+    <bad>Birthday :</bad> <dimensions><input type="date" size="20"  name="birthday"></dimensions><br><br>
 
     <bad>Gender :</bad> <dimensions><input type="text" size="20" name="gender"></dimensions><br><br>
 

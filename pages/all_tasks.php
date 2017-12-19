@@ -26,9 +26,6 @@
     <h1> Welcome User </h1>
 
    <br>
-   <br>
-
-
    <a href="index.php?page=accounts&action=profile"><b>Edit Your Profile<b></a>
 
 
@@ -38,7 +35,6 @@
 
 
    <?php
-
           if($data == false)
             {
               echo '<h4>  No Task Created </h4>';
@@ -58,15 +54,14 @@
   <style>
 
     dimensions
-    {
+       {
         width:12em;
         text-align:center;
         float:left;
         margin-left :6em;
-    }
-
+       }
     div
-    {
+       {
         border: 20px wheat;
         background-color: whitesmoke;
         border-style: solid;
@@ -74,52 +69,52 @@
         height: 550px;
         width: 500px;
         margin-left: 35em;
+       }
+    foo
+       {
+        font-size: 15px;
+        margin-left: 7em;
+       }
+    delta
+       {
+        font-size: 15px;
+        margin-left: 11em;
+       }
+    A1
+       {
+        text-align: center;
+       }
 
-    }
+</style>
 
-      foo
-      {
+      <A1><h3><b>Insert New Task </b></h3></A1> <br>
 
-          font-size: 15px;
-          margin-left: 7em;
-      }
-      delta
-      {
-          font-size: 15px;
-          margin-left: 10em;
+<div>
 
-      }
-
-
-
-  </style>
-
-   <div>
-
-<form action="index.php?page=tasks&action=insert" method="post" id="formInsertTask">
-
-
-
-    <foo>Owner Email :</foo> <dimensions> <input type="email" name="owneremail"> </dimensions><br><br><br>
-
-    <foo>Owner Id :</foo> <dimensions> <input type="number" name="ownerid"> </dimensions><br><br><br>
-
-    <foo>Created Date :</foo> <dimensions> <input type="date" name="createddate"> </dimensions><br><br><br>
-
-    <foo>Due Date :</foo> <dimensions> <input type="date" name="duedate"> </dimensions><br><br><br>
-
-    <foo>Message :</foo> <dimensions> <input type="text" name="message" > </dimensions><br><br><br>
-
-    <foo>Is Done :</foo> <dimensions> <input type="number" name="isdone"> </dimensions><br><br><br>
-    <br>
-
-    <delta><input type="submit" form="formInsertTask" value="Insert Task"> </delta>
+    <form action="index.php?page=tasks&action=insert" method="post" id="formInsertTask">
 
 
-</form>
 
-   </div>
+       <foo>Owner Email :</foo> <dimensions> <input type="email" name="owneremail"> </dimensions><br><br><br>
 
-   <script src="js/scripts.js"></script>
+       <foo>Owner Id :</foo> <dimensions> <input type="number" name="ownerid"> </dimensions><br><br><br>
+
+       <foo>Created Date :</foo> <dimensions> <input type="date" name="createddate"> </dimensions><br><br><br>
+
+       <foo>Due Date :</foo> <dimensions> <input type="date" name="duedate"> </dimensions><br><br><br>
+
+       <foo>Message :</foo> <dimensions> <input type="text" name="message" > </dimensions><br><br><br>
+
+       <foo>Is Done :</foo> <dimensions> <input type="number" name="isdone"> </dimensions><br><br><br>
+
+
+       <delta><input type="submit" form="formInsertTask" value="Insert"> </delta>
+
+     </form>
+
+</div>
+
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

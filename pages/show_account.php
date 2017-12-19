@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
+
   <br>
   <?php
         include "header.php";
@@ -23,54 +24,82 @@
 <body style='background-color:lightblue'>
 
 
-<h3>First Name : <?php echo $data->fname; ?></h3>
-<h3>Last Name : <?php echo $data->lname; ?></h3>
-<h3>Email : <?php echo $data->email; ?></h3>
+  <b>First Name :</b> <?php echo $data->fname; ?> <br>
+  <b>Last Name :</b> <?php echo $data->lname; ?> <br>
+  <b>Email :</b> <?php echo $data->email; ?> <br>
 
+ <br>
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
+     <b> <?php
+     //this is how you print something  $data contains the record that was selected on the table.
+     print utility\htmlTable::generateTableFromOneRecord($data);
+     ?> </b>
 
+ <br>
 
-  print utility\htmlTable::generateTableFromOneRecord($data);
-
-
-?>
 
 <style>
     dimensions
-    {
-        width:5em;
-        float:right;
-        text-align:left;
-        margin-right :88.0em;
-    }
+       {
+        width:12em;
+        text-align:center;
+        float:left;
+        margin-left :6em;
+       }
+    div
+       {
+        border: 20px wheat;
+        background-color: whitesmoke;
+        border-style: solid;
+        padding: 30px 30px 30px 30px;
+        height: 550px;
+        width: 500px;
+        margin-left: 35em;
+       }
+    foo
+       {
+        font-size: 15px;
+        margin-left: 7em;
+       }
+    A1
+       {
+        text-align: center;
+       }
 
-    </style>
-
-<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
-
-    First Name: <dimensions> <input type="text" name="fname" value="<?php echo $data->fname; ?>"> </dimensions><br><br>
-
-    Last Name: <dimensions> <input type="text" name="lname" value="<?php echo $data->lname; ?>"> </dimensions><br><br>
-
-    Email: <dimensions> <input type="email" name="email" value="<?php echo $data->email; ?>"></dimensions><br><br>
-
-    Phone: <dimensions> <input type="number" name="phone" value="<?php echo $data->phone; ?>"></dimensions><br><br>
-
-    Birthday: <dimensions> <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"></dimensions><br><br>
-
-    Gender: <dimensions> <input type="text" name="gender" value="<?php echo $data->gender; ?>"></dimensions><br><br>
-
-    <input type="submit" value="Submit form">
-
-</form>
+</style>
 
 
-<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+  <A1><h3><b> Update Account  </b></h3></A1> <br>
 
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form>
+
+<div>
+
+     <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
+
+       <foo><b> First Name :</b></foo> <dimensions> <input type="text" name="fname" > </dimensions> <br><br><br>
+
+       <foo><b> Last Name :</b></foo> <dimensions> <input type="text" name="lname" > </dimensions> <br><br><br>
+
+       <foo><b> Email :</b></foo> <dimensions> <input type="email" name="email" > </dimensions> <br><br><br>
+
+       <foo><b> Phone :</b></foo> <dimensions> <input type="number" name="phone" > </dimensions> <br><br><br>
+
+       <foo><b> Birthday :</b></foo> <dimensions> <input type="date" name="birthday" > </dimensions> <br><br><br>
+
+       <foo><b> Gender :</b></foo> <dimensions> <input type="text" name="gender" > </dimensions> <br><br><br>
+
+       <foo><input type="submit" value="Update"></foo>
+
+
+       <button type="submit" form="form1" value="delete">Delete</button>
+
+     </form>
+
+</div>
+
+
+     <form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+     </form>
 
 
 <script src="js/scripts.js"></script>

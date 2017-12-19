@@ -24,81 +24,82 @@
         include "header.php";
     ?>
 
-    <h3>List of Task</h3>
+    <h3>List of Tasks :</h3>
 
     <br>
 
-   <?php
+        <b> <?php
         //this is how you print something  $data contains the record that was selected on the table.
         print utility\htmlTable::generateTableFromOneRecord($data);
+        ?> </b>
 
-    ?>
-
-    <style>
-          dimensions
-          {
-
-              width:12em;
-              text-align:center;
-              float:left;
-              margin-left :6em;
-          }
-
-          div
-          {
-              border: 20px wheat;
-              background-color: whitesmoke;
-              border-style: solid;
-              padding: 30px 30px 30px 30px;
-              height: 550px;
-              width: 500px;
-              margin-left: 35em;
-
-          }
-          foo
-          {
-
-              font-size: 15px;
-              margin-left: 7em;
-          }
+    <br><br>
 
 
+<style>
+       dimensions
+        {
+         width:12em;
+         text-align:center;
+         float:left;
+         margin-left :6em;
+        }
+       div
+        {
+         border: 20px wheat;
+         background-color: whitesmoke;
+         border-style: solid;
+         padding: 30px 30px 30px 30px;
+         height: 550px;
+         width: 500px;
+         margin-left: 35em;
+        }
+       foo
+        {
+         font-size: 15px;
+         margin-left: 7em;
+        }
+        A1
+         {
+          text-align: center;
+         }
+</style>
 
-    </style>
+
+      <A1><h3><b>Update or Delete Task </b></h3></A1> <br>
+
+<div>
+
+   <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
 
+       <foo><b>Owner Email :</b></foo> <dimensions> <input type="email" name="owneremail" > </dimensions><br><br><br>
 
-<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+       <foo><b>Owner Id :</b></foo> <dimensions> <input type="number" name="ownerid" > </dimensions><br><br><br>
 
-    <div>
+       <foo><b>Created Date :</b></foo> <dimensions> <input type="date" name="createddate" > </dimensions><br><br><br>
 
-        <foo><b>Owner Email :</b></foo> <dimensions> <input type="email" name="owneremail" value="<?php echo $data->owneremail; ?>"></dimensions><br><br><br>
+       <foo><b>Due Date :</b></foo> <dimensions> <input type="date" name="duedate" > </dimensions><br><br><br>
 
-        <foo><b>Owner Id :</b></foo> <dimensions> <input type="number" name="ownerid" value="<?php echo $data->ownerid; ?>"></dimensions><br><br><br>
+       <foo><b>Message :</b></foo> <dimensions> <input type="text" name="message" > </dimensions><br><br><br>
 
-         <foo><b>Created Date :</b></foo> <dimensions> <input type="date" name="createddate" value="<?php echo $data->createddate; ?>"></dimensions><br><br><br>
+       <foo><b>Is Done :</b></foo> <dimensions> <input type="number" name="isdone" > </dimensions><br><br><br>
 
-          <foo><b>Due Date :</b></foo> <dimensions> <input type="date" name="duedate" value="<?php echo $data->duedate; ?>"></dimensions><br><br><br>
-
-          <foo><b>Message :</b></foo> <dimensions> <input type="text" name="message" value="<?php echo $data->message; ?>"></dimensions><br><br><br>
-
-           <foo><b>Is Done :</b></foo> <dimensions> <input type="number" name="isdone" value="<?php echo $data->isdone; ?>"></dimensions><br><br><br>
-
-        <foo><input type="submit" value="Submit"></foo>
-
-
-
-             <button type="submit" form="form1" value="delete">Delete</button>
-
-    </div>
-
-</form>
+       <foo><input type="submit" value="Update"></foo>
 
 
 
-<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+       <button type="submit" form="form1" value="delete">Delete</button>
 
-</form>
+   </form>
+
+</div>
+
+
+
+   <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+
+   </form>
 
 
 
