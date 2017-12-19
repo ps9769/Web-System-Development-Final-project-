@@ -63,7 +63,7 @@
       x
       {
           font-size: 20px;
-          margin-left:35em ;
+          margin-left:36em ;
       }
       #qas
       {

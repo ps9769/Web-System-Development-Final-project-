@@ -8,13 +8,13 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css ">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
-
+  <br>
   <?php
         include "header.php";
     ?>
@@ -23,16 +23,16 @@
 <body style='background-color:lightblue'>
 
 
-<h1>First Name : <?php echo $data->fname; ?></h1>
-<h1>Last Name : <?php echo $data->lname; ?></h1>
-<h1>Email : <?php echo $data->email; ?></h1>
+<h3>First Name : <?php echo $data->fname; ?></h3>
+<h3>Last Name : <?php echo $data->lname; ?></h3>
+<h3>Email : <?php echo $data->email; ?></h3>
 
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 
 
- print utility\htmlTable::generateTableFromOneRecord($data);
+  print utility\htmlTable::generateTableFromOneRecord($data);
 
 
 ?>
@@ -45,6 +45,7 @@
         text-align:left;
         margin-right :88.0em;
     }
+
     </style>
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
@@ -62,6 +63,7 @@
     Gender: <dimensions> <input type="text" name="gender" value="<?php echo $data->gender; ?>"></dimensions><br><br>
 
     <input type="submit" value="Submit form">
+
 </form>
 
 

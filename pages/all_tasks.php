@@ -8,7 +8,7 @@
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -18,16 +18,17 @@
 <body style='background-color:lightblue'>
 
 
+
+    <br>
    <?php
         include "header.php";
      ?>
-
+    <h1> Welcome User </h1>
 
    <br>
    <br>
 
-   <a href="index.php?page=accounts&action=profile"><b>Profile</b></a>
-   &nbsp;      &nbsp; &nbsp;
+
    <a href="index.php?page=accounts&action=profile"><b>Edit Your Profile<b></a>
 
 
@@ -40,7 +41,7 @@
 
           if($data == false)
             {
-              echo '<h3> No Task is Created </h3>';
+              echo '<h4>  No Task Created </h4>';
              }
           else
             {
@@ -58,10 +59,10 @@
 
     dimensions
     {
-        width:5em;
-        float:right;
-        text-align:left;
-        margin-right :10em;
+        width:12em;
+        text-align:center;
+        float:left;
+        margin-left :6em;
     }
 
     div
@@ -69,11 +70,25 @@
         border: 20px wheat;
         background-color: whitesmoke;
         border-style: solid;
-        padding: 40px 40px 40px 40px;
-        width: 250px;
-        margin-left: 38em;
+        padding: 30px 30px 30px 30px;
+        height: 550px;
+        width: 500px;
+        margin-left: 35em;
 
     }
+
+      foo
+      {
+
+          font-size: 15px;
+          margin-left: 7em;
+      }
+      delta
+      {
+          font-size: 15px;
+          margin-left: 10em;
+
+      }
 
 
 
@@ -85,20 +100,21 @@
 
 
 
-   Owner Email: <dimensions> <input type="email" name="owneremail"> </dimensions><br><br>
+    <foo>Owner Email :</foo> <dimensions> <input type="email" name="owneremail"> </dimensions><br><br><br>
 
-    Owner Id: <dimensions> <input type="number" name="ownerid"> </dimensions><br><br>
+    <foo>Owner Id :</foo> <dimensions> <input type="number" name="ownerid"> </dimensions><br><br><br>
 
-    Created Date: <dimensions> <input type="text" name="createddate"> </dimensions><br><br>
+    <foo>Created Date :</foo> <dimensions> <input type="date" name="createddate"> </dimensions><br><br><br>
 
-    Due Date: <dimensions> <input type="text" name="duedate"> </dimensions><br><br>
+    <foo>Due Date :</foo> <dimensions> <input type="date" name="duedate"> </dimensions><br><br><br>
 
-    Message: <dimensions> <input type="text" name="message" > </dimensions><br><br>
+    <foo>Message :</foo> <dimensions> <input type="text" name="message" > </dimensions><br><br><br>
 
-    Is Done: <dimensions> <input type="number" name="isdone"> </dimensions><br><br>
+    <foo>Is Done :</foo> <dimensions> <input type="number" name="isdone"> </dimensions><br><br><br>
     <br>
 
-    <input type="submit" form="formInsertTask" value="Insert Task">
+    <delta><input type="submit" form="formInsertTask" value="Insert Task"> </delta>
+
 
 </form>
 
